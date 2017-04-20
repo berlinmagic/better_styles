@@ -1,0 +1,61 @@
+<body>
+  
+  <div class="fullpage-table" id="front-banner">
+    <div class="table-row">
+      <div class="cell header-cell dark">
+        <div class="corset">
+          header
+        </div>
+      </div>
+    </div>
+    <div class="table-row">
+      <div class="cell body fill">
+        <div class="corset center">
+          <%= image_tag "paperplane-blue3.png", id: "paperplane" %>
+          <div class="clearfix"></div>
+          <br/>
+          <h1 class="display brand5-clr">better styles <small><%= BetterStyles::VERSION %></small></h1>
+        </div>
+      </div>
+    </div>
+    <div class="table-row">
+      <div class="cell footer-cell dark">
+        <div class="corset">
+          footer
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="main_stage">
+    
+    <div id="aside">
+      <% 25.times do |x| %>
+        <a class="aside_lnk">
+          <div class="icn">
+            <i class='bettericon-earth'></i>
+          </div>
+          <div class="label">
+            Aside Link <%= x + 1 %>
+          </div>
+        </a>
+      <% end %>
+    </div>
+    
+    <div id="stage">
+      <div class="section">
+        <div class="corset">
+        
+          <% 15.times do |x| %>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          <% end %>
+        
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</body>

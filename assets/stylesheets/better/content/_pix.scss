@@ -1,0 +1,68 @@
+img.responsive {
+    width: 100%; max-width: 100%;
+}
+
+
+
+img.avatar, img.logo {
+    width: 30px;
+    vertical-align: top;
+    display: inline-block;
+    &.big {
+      width: auto;
+      max-width: 120px;
+      border-radius: 80px;
+    }
+    &.xs { width: 18px; }
+    &.sm { width: 24px; }
+    &.lg { width: 40px; }
+    &.xl { width: 60px; }
+    &.xxl { width: 80px; }
+}
+img.avatar { border-radius: 60px; }
+img.logo { border-radius: 5px; }
+
+
+
+.image-card, .image_card {
+    display: block; position: relative;
+    margin: 0; padding: 0 0 0 #{ $line-height-computed * 2 + 8px };
+    text-align: left;
+    img {
+        display: block; position: absolute;
+        top: 0; left: 0;
+        width: $line-height-computed * 2;
+    }
+    p {
+        line-height: $line-height-computed;
+        margin: 0;
+    }
+    &.one_line, &.one-line {
+        $size: $line-height-computed * 2;
+        padding-left: $size + 8px;
+        img { width: $size; }
+        p { line-height: $size; }
+    }
+    
+    &.img-sm {
+        $size: $line-height-computed * 1.5;
+        padding-left: $size + 8px;
+        img { width: $line-height-computed * 1.5; }
+        p { line-height: $size; }
+    }
+}
+a.image-card, a.image_card {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+        color: $blue;
+    }
+}
+
+
+
+.huge-icon {
+ font-size: 120px;
+ line-height: 150px; 
+}
+

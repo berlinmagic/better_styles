@@ -1,0 +1,69 @@
+@include responsiveStep-xs-only {
+	.press-xs { margin-bottom: $vertical-spacing; }
+	.hide-xs { display: none !important; }
+}
+
+@include responsiveStep-sm-only {
+	.press-sm { margin-bottom: $vertical-spacing; }
+	.hide-sm { display: none !important; }
+}
+
+@include responsiveStep-md-only {
+	.press-md { margin-bottom: $vertical-spacing; }
+	.hide-md { display: none !important; }
+}
+
+@include responsiveStep-lg-only {
+	.press-lg { margin-bottom: $vertical-spacing; }
+	.hide-lg { display: none !important; }
+}
+
+
+.press { margin-bottom: $vertical-spacing !important; }
+.half-press, .press-half { margin-bottom: $vertical-spacing-half !important; }
+
+
+.left_text { text-align: left !important; }
+.center_text { text-align: center !important; }
+.right_text { text-align: right !important; }
+
+.pull-left { float: left; }
+.pull-right { float: right; }
+.no-pull { float: none; }
+
+
+@each $size in 0, 5, 10, 15, 20, 30, 40, 50 {
+    
+    .padding_#{$size},   .p#{$size}   { padding: #{$size}px; }
+    .v_padding_#{$size}, .vp#{$size}  { padding-top: #{$size}px; padding-bottom: #{$size}px; }
+    .h_padding_#{$size}, .hp#{$size}  { padding-left: #{$size}px; padding-right: #{$size}px; }
+    
+    .margin_#{$size},   .m#{$size}    { margin: #{$size}px; }
+    .v_margin_#{$size}, .vm#{$size}   { margin-top: #{$size}px; margin-bottom: #{$size}px; }
+    .h_margin_#{$size}, .hm#{$size}   { margin-left: #{$size}px; margin-right: #{$size}px; }
+
+}
+
+@each $clrName, $clrValue in $appColorz {
+    .#{"" + $clrName}-bg, .bg-#{"" + $clrName} {
+        background: #{ $clrValue };
+    }
+    .#{"" + $clrName}-text, .text-#{"" + $clrName}, 
+    .txt-#{"" + $clrName}, .#{"" + $clrName}-txt, 
+    .clr-#{"" + $clrName}, .#{"" + $clrName}-clr, 
+    .color-#{"" + $clrName}, .#{"" + $clrName}-color {
+        color: #{ $clrValue } !important;
+    }
+}
+
+
+
+.fivty {    width: 50%; max-width: 50%; }
+.sixty {    width: 60%; max-width: 60%; }
+.seventy {  width: 70%; max-width: 70%; }
+.eighty {   width: 80%; max-width: 80%; }
+.ninty {    width: 90%; max-width: 90%; }
+.fivty, .sixty, .seventy, .eighty, .ninty { 
+  @include horizontal-margin( auto ); 
+}
+

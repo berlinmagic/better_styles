@@ -1,0 +1,46 @@
+// resets & defaults
+.box, .box > .header, .box > .body, .box > .footer {
+  display: block; position: relative;
+  margin: 0; padding: 0;
+}
+
+
+.box {
+  margin: 0 0 $vertical-spacing; 
+  padding: 10px;
+  text-align: left;
+  background: #fff;
+  border: solid 1px $main-border-color;
+  border-radius: 3px;
+  
+	& > .header {
+		padding: 0 10px 10px;
+		border-bottom: solid 1px $main-border-color;
+    
+		& > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > p {
+      &:first-child { margin-top: 0; }
+      &:last-child { margin-bottom: 0; }
+    }
+		&.blank { border-bottom: solid 1px transparent; }
+	}
+  & > .sub-header {
+      padding: 10px;
+      background: #f4f4f4;
+  }
+	& > .body {
+		padding: 10px;
+	}
+  & > .footer {
+	    border-top: solid 1px $main-border-color;
+	    padding: 10px;
+	    .btn { margin-top: 0; margin-bottom: 0; }
+	    .row > * { margin-bottom: 0; }
+	}
+  
+  &.blank { background: transparent; }
+  &.shadow { @include box-shadow( 0 3px 3px 0 rgba(0, 0, 0, 0.20) ); }
+  
+  &.center { text-align: center; }
+  &.right { text-align: right; }
+  
+}

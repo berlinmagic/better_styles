@@ -1,0 +1,57 @@
+$vertical-spacing:                      1.5rem    !default;
+$vertical-spacing-half:                 0.75rem   !default;
+$horizontal-spacing:                    1rem      !default;
+
+$grid-gutter-width:                     30px      !default;
+
+
+//== Divider
+//
+$divider-horizontal-spacing:            1.2rem !default;
+// for .divider and hr elements
+$divider-vertical-spacing:              $vertical-spacing !default;
+$divider-top-color:                     rgba(0,0,0,.23)       !default;
+$divider-bottom-color:                  rgba(255,255,255,.65) !default;
+
+
+//   Sections
+// 
+
+// Padding
+$section-padding:                    50px !default;
+$section-head-padding:               10px !default;
+
+$section-xs-padding:                 10px !default;
+$section-sm-padding:                 30px !default;
+$section-lg-padding:                 80px !default;
+$section-xl-padding:                 120px !default;
+$section-xxl-padding:                200px !default;
+
+
+// Colors
+$section-background:                 $main-bg !default;
+$section-input-bg:                   $white !default;
+
+$section-head-background:            #fff !default;
+$section-head-input-bg:              $main-bg !default;
+$section-head-color:                 $brand-color !default;
+$section-head-small-color:           $gray-light !default;
+
+$section-dark-background:            $dark-bg !default;
+$section-dark-input-bg:              $white !default;
+
+$section-bright-background:          $bright-bg !default;
+$section-bright-input-bg:            $main-bg !default;
+
+$section-soft-background:            $soft-bg !default;
+$section-soft-input-bg:              $white !default;
+
+
+$section-head-line-height:           30px !default;
+$section-head-font-size:             20px !default;
+
+// Reset margin of first and last childs, so section controls spacing
+$section-reset-child-spacing:        true !default;
+$section-reset-row-child-spacing:    true !default;
+$section-reset-table-child-spacing:  true !default;
+

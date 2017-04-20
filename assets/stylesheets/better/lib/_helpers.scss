@@ -1,0 +1,27 @@
+@mixin squareSize( $size ) {
+	width: #{ $size }px;
+	height: #{ $size }px;
+}
+
+@mixin square-size( $size ) {
+	width: $size;
+	height: $size;
+}
+
+@mixin horizontal-padding( $pad: 5px ) {
+	padding-left: $pad; padding-right: $pad;
+}
+@mixin vertical-padding( $pad: 5px ) {
+	padding-top: $pad; padding-bottom: $pad;
+}
+@mixin horizontal-margin( $pad: 5px ) {
+	margin-left: $pad; margin-right: $pad;
+}
+@mixin vertical-margin( $pad: 5px ) {
+	margin-top: $pad; margin-bottom: $pad;
+}
+
+
+@mixin rotation( $rotate ) {
+	transform: rotate(#{ $rotate }deg);
+}

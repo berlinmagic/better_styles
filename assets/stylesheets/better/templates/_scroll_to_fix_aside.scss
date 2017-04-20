@@ -1,0 +1,104 @@
+$aside-width:               220px;
+$aside-bg:                  #222;
+$aside-color:               #999;
+$aside-line-top-color:      rgba(0,0,0,.42);
+$aside-line-bottom-color:   rgba(255,255,255,.13);
+
+body {
+    
+    &.fixed-nav {
+        #main_stage #aside.affix { top: 50px; }
+        #aside_toggle { top: 60px; }
+    }
+    
+    &.with_aside {
+        // #front_banner { @include transform( translateX( $aside-width ) ); }
+        margin-left: $aside-width;
+        margin-right: -1 * $aside-width;
+        // @include transform( translateX( $aside-width ) );
+        
+        // @include transform( translateX( $aside-width ) );
+        #main_stage #aside {
+            transform: translateX( 0 ) ;
+            // @include transform( translateX( -1 * $aside-width ) );
+        }
+        
+        &.fixed-nav {
+            #main_stage #aside { top: 50px; }
+        }
+        // #main_stage #stage {
+        //     @include transform( translateX( $aside-width ) );
+        // }
+        #aside_toggle {
+            position: fixed;
+            left: $aside-width + 20px;
+            z-index: 850;
+        }
+    }
+    
+}
+
+#main_stage, #aside, #stage, #aside_toggle {
+    display: block; position: relative;
+    margin: 0; padding: 0;
+}
+
+#main_stage {
+    
+    // padding-left: $aside-width;
+    
+    #aside {
+        // position: absolute;
+        position: fixed;
+        top: 0; left: 0; bottom: 0;
+        width: $aside-width;
+        background: $aside-bg;
+        color: $aside-color;
+        
+        transform: translateX( -1 * $aside-width );
+        
+        z-index: 500;
+        
+        // &.affix { position: fixed; }
+        @include asideScrollBar;
+        overflow-y: scroll;
+        
+    }
+    #stage {
+        
+    }
+    
+}
+
+#aside_toggle {
+    position: fixed;
+    top: 20px; left: 20px;
+    width: 30px; height: 30px; line-height: 30px;
+    border: solid 1px $main-border-color;
+    border-radius: 3px;
+    background: #fff;
+    font-size: 20px;
+    text-align: center;
+    color: #777;
+    z-index: 500;
+    cursor: pointer;
+    &:hover {
+        background: #ccc;
+    }
+}
+
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
+@include responsiveStep-md {
+  
+  #aside_toggle { display: none; }
+  
+  #main_stage {
+      padding-left: $aside-width;
+      #aside {
+          transform: translateX( 0 ) ;
+          position: absolute;
+          &.affix { position: fixed; }
+      }
+  }
+  
+}

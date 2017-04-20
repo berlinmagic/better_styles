@@ -1,0 +1,43 @@
+// before sm 
+@mixin responsiveStep-xs {
+  @include media-breakpoint-up(xs) { @content; }
+}
+@mixin responsiveStep-sm {
+	@include media-breakpoint-up(sm) { @content; }
+}
+@mixin responsiveStep-md {
+	@include media-breakpoint-up(md) { @content; }
+}
+@mixin responsiveStep-lg {
+	@include media-breakpoint-up(lg) { @content; }
+}
+@mixin responsiveStep-xl {
+	@media only screen and (min-width: 1600px) {
+		@content;
+	}
+}
+@mixin responsiveStep-xxl {
+	@media only screen and (min-width: 2000px) {
+		@content;
+	}
+}
+
+
+
+@mixin responsiveStep-xs-only {
+  @include media-breakpoint-only(xs) { @content; }
+}
+@mixin responsiveStep-sm-only {
+	@include media-breakpoint-only(sm) { @content; }
+}
+@mixin responsiveStep-md-only {
+	@include media-breakpoint-only(md) { @content; }
+}
+@mixin responsiveStep-lg-only {
+	@include media-breakpoint-only(lg) { @content; }
+}
+@mixin responsiveStep-xl-only {
+	@media only screen and (min-width: 1600px) and (max-width: 1999px) {
+		@content;
+	}
+}

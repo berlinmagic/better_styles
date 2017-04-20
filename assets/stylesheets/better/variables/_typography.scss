@@ -1,0 +1,31 @@
+$bold:            500       !default;
+$semi:            400       !default;
+$regular:         300       !default;
+$thin:            200       !default;
+
+
+$line-height:     1.42      !default;
+
+
+$display-size:    3rem      !default;
+$headline-size:   2rem      !default;
+$title-size:      1.6rem    !default;
+$subheader-size:  1.3rem    !default;
+$body-size:       1rem      !default;
+$caption-size:    0.9rem    !default;
+$small-size:      0.75rem   !default;
+
+
+$textSizes: (
+  display:      3rem,
+  headline:     2rem,
+  title:        1.6rem,
+  subheader:    1.3rem,
+  body:         1rem,
+  caption:      0.9rem,
+  small:        0.75rem
+);
+
+$sansFontFamily:      "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:     Georgia, "Times New Roman", Times, serif;
+$monoFontFamily:      Monaco, Menlo, Consolas, "Courier New", monospace;
