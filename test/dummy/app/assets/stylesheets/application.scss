@@ -1,27 +1,73 @@
-
 @import "better_styles";
+@import "better/templates/fixed_aside_to_header";
 
-@import "better/templates/scroll_to_fix_aside";
+
+
+#mainFrame {
+	display: block; position: relative;
+	margin: 0; padding: 0;
+	width: 100%; height: 100%;
+	border: none;
+}
 
 
 #front-banner {
   background-color: rgba(255,255,255,.50);
-  background-image: image-url("karo_p.jpg");
+  background-image: image-url("bgs/karo_p.jpg");
   background-position: center center;
   background-repeat: repeat;
 }
 
-#paperplane {
+img.paperplane_pic {
   max-width: 80%;
 }
 
+
+.icon_sample {
+	display: inline-block;
+	position: relative;
+	margin: 5px;
+	padding: 0;
+	width: 100px;
+	font-size: 13px;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: top;
+	@include border-radius(3px);
+	.sample_icon, .sample_name {
+	    display: block; position: relative;
+	    margin: 0; padding: 0;
+	}
+	.sample_icon {
+		margin: 5px 5px 0;
+	    line-height: 80px;
+	    font-size: 42px;
+	    color: #444;
+		background: #fff;
+		border: solid 1px #ccc;
+		@include border-radius(3px);
+	}
+	.sample_name { 
+    font-weight: bold; height: 40px; vertical-align: middle; 
+    &.zeroclipboard-is-hover { color: $brand1; }
+    &.zeroclipboard-is-active { color: $brand2; }
+  }
+	&:hover, &.zeroclipboard-is-hover {
+		// background: #ccc;
+		i { 
+			font-size: 60px; color: #09c;
+		}
+	}
+}
+
+
 @include responsiveStep-md {
-  #paperplane { max-width: 50%; }
+  img.paperplane_pic { max-width: 50%; }
 }
 
 
 @include responsiveStep-lg {
-  #paperplane { max-width: 400px; }
+  img.paperplane_pic { max-width: 400px; }
 }
 
 

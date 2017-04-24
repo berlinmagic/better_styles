@@ -1,94 +1,71 @@
-<div class="fullpage-table" id="front-banner">
-  <div class="table-row">
-    <div class="cell">
-      <div class="corset center">
-        <%= image_tag "paperplane-blue3.png", id: "paperplane" %>
-        <div class="clearfix"></div>
-        <br/>
-        <h1 class="display brand5-clr">better styles <small><%= BetterStyles::VERSION %></small></h1>
+  <a href="#" id="mobile_header" class="inline_table center_text">
+    <div class="cell icn col-1 middle">
+      <i class="olicons-show-sb"></i>
+    </div>
+    <div class="cell col-10 middle">
+      <span id="current-view-name">Better-Stylez</span>
+    </div>
+    <div class="cell icn col-1 middle">
+      <i class="olicons-show-sb"></i>
+    </div>
+  </a>
+  
+  <div id="aside">
+    <div class="aside-content">
+      <ul class="nav_list lined nice">
+        <li class="current active"><%= link_to "Better-Stylez", "#", class: "app_lnk lst_lnk", data: {target: ""} %></li>
+        <% pathes = {} %>
+        <% Dir.glob("#{Rails.root}/app/assets/javascripts/views/**/*").each do |ff| %>
+          <% path = ff.gsub("#{Rails.root}/app/assets/javascripts/views/", "") %>
+          <% if path.match(/\.jst.eco$/) %>
+            <% path = path.gsub(".jst.eco", "") %>
+            <% ar = path.split("/") %>
+            <% pathes[ar[0]] ||= {} %>
+            <% pathes[ ar[0] ][ ar[1] ] = path %>
+          <% end %>
+        <% end %>
+        <% pathes.each do |main, sub| %>
+          <% unless main == "app" %>
+            <li class="arrow"><%= link_to main.titleize, "#", class: "lst_lnk" %>
+              <ul class="sub_nav">
+                <% sub.each do |lnk, path| %>
+                  <% unless Rails.env.production? && %w(reflections slide_boxes).include?( lnk.to_s ) %>
+                    <li><%= link_to lnk == "at_first" ? "Introduction" : lnk.titleize, "#", class: "app_lnk lst_lnk", data: {target: path} %></li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </li>
+          <% end %>
+        <% end %>
+        <li><%= link_to "Changelog", "#", class: "app_lnk lst_lnk", data: {target: "app/changelog"} %></li>
+      </ul>
+    
+      <div class="clearfix"></div>
+      <br/>
+      <a href="https://github.com/berlinmagic/better_styles/tree/master" target="_blank" class="btn btn-secondary btn-divided">
+        <span class="icn"><i class="icomoon-github3"></i></span>
+        <span>SourceCode</span>
+      </a>
+      <div class="clearfix"></div>
+      <br/>
+    </div>
+  </div>
+  
+  <div class="clearfix"></div>
+  <div id="app_content">
+    
+    <div class="fullpage-table" id="front-banner">
+      <div class="table-row">
+        <div class="cell">
+          <div class="corset center">
+            <%= render "shared/paperplane_pic" %>
+            <div class="clearfix"></div>
+            <br/>
+            <h1 class="display brand5-clr">better styles <small><%= BetterStyles::VERSION %></small></h1>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="section head">
-  <div class="corset">
-    <h1>better_styles</h1>
-  </div>
-</div>
-
-<div class="section">
-  <div class="corset">
-    
-    <h2>Hey Hey</h2>
-    
-    <div class="row">
-      <% 2.times do |x| %>
-        <div class="col-6 col-sm-3">
-          <div class="box">
-            .col-6 .col-sm-3
-          </div>
-        </div>
-      <% end %>
-      <!-- Add the extra clearfix for only the required viewport -->
-      <div class="clearfix hidden-sm-up"></div>
-      <% 2.times do |x| %>
-        <div class="col-6 col-sm-3">
-          <div class="box">
-            .col-6 .col-sm-3
-          </div>
-        </div>
-      <% end %>
-    </div>
     
   </div>
-</div>
-
-<% 10.times do |x| %>
-  <% that = x %>
-  <div class="section brand<%= that %>">
-    <div class="corset center">
-      <p class="title">.section<%= that > 0 ? ".brand#{ that }" : "" %> p.title</p>
-      <p class="title secondary">.section.brand<%= x + 1 %> p.title.secondary</p>
-      <p class="title disabled">.section.brand<%= x + 1 %> p.title.disabled</p>
-    </div>
-  </div>
-<% end %>
-
-<div class="section">
-  <div class="corset">
-    
-    <table class="table table-inverse">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
-    
-  </div>
-</div>
-
+  <div class="clearfix"></div>

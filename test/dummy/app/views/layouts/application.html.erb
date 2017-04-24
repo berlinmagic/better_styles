@@ -3,7 +3,7 @@
   <head>
     <%= render "layouts/head" %>
   </head>
-  <body>
+  <body class="<%= "#{ @body_class }" if @body_class %>">
     <%= render "layouts/dev_bar" %>
     <%= yield %>
   </body>

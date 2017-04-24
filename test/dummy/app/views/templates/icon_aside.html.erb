@@ -1,0 +1,109 @@
+<body class="admin app">
+  
+  <div class="app-logo">
+    <div class="toggl">
+      <%= icon("menu2") %>
+    </div>
+    <%= link_to "Better-Styles", root_path, class: "labl" %>
+    <%= link_to icon("wand"), root_path, class: "short-labl" %>
+  </div>
+  
+  
+  <div class="aside admin main-aside">
+    <div class="aside-inner">
+      
+      <%= render "shared/user_aside_link" %>
+      
+      <%= link_to "#", class: "aside_lnk" do  %>
+        <div class="icn"><%= icon("meter") %></div>
+        <div class="labl">Dashboard</div>
+      <% end %>
+      
+      
+      <%= link_to "#", class: "aside_lnk" do  %>
+        <div class="icn"><%= olicon("analytics-alt") %></div>
+        <div class="labl">Analytics</div>
+      <% end %>
+      
+      
+      <%= link_to "#", class: "aside_lnk" do  %>
+        <div class="icn"><%= icon("users") %></div>
+        <div class="labl">Users</div>
+      <% end %>
+      
+      
+      <hr/>
+      
+      <div class="aside_lnk">
+        <a href="#" class="toggler">
+          <div class="icn"><%= btricon("text-block") %></div>
+          <div class="labl">More <span class="caret"></span></div>
+        </a>
+        <ul class="aside_nav">
+          <% 10.times do |x| %>
+          <li>
+            <%= link_to "#{}" do  %>
+              <div class="icn"><%= btricon("text-list") %></div>
+              <div class="labl">Sub-Link <%= x + 1 %></div>
+            <% end %>
+          </li>
+          <% end %>
+          <li>
+            <div class="aside_lnk">
+              <a href="#" class="toggler">
+                <div class="icn"><%= btricon("text-edit") %></div>
+                <div class="labl">Sub-List <span class="caret"></span></div>
+              </a>
+              <ul class="aside_nav">
+                <% 5.times do |x| %>
+                  <li>
+                    <%= link_to "#{}" do  %>
+                      <div class="icn"><%= btricon("text-list") %></div>
+                      <div class="labl">Sub-Link <%= x + 1 %></div>
+                    <% end %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <hr/>
+      <% 7.times do |x| %>
+        <a class="aside_lnk">
+          <div class="icn">
+            <i class='bettericon-earth'></i>
+          </div>
+          <div class="label">
+            Aside Link <%= x + 1 %>
+          </div>
+        </a>
+      <% end %>
+      
+      <br/>
+      <br/>
+      <br/>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div class="main-content">
+    <div class="clearfix"></div>
+    <div class="changed_content" id="changed_content">
+      
+      <div class="section">
+        <div class="corset">
+          
+          <%= render "shared/lorems" %>
+          
+        </div>
+      </div>
+      
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  
+</body>

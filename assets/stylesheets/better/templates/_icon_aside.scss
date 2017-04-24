@@ -1,0 +1,404 @@
+$appAside-width:        14rem;
+$appAside-icn-width:    2.5rem;
+
+$appAside-bg:           #e5e5e5;
+$appAside-admin-bg:     #222;
+
+$appAside-color:        #444;
+$appAside-admin-color:  #ccc;
+
+$infoAside-width:       18rem;
+$infoAside-margin:      0.65rem;
+
+$filterAside-width:     15rem;
+
+.main-aside, .right-aside, .filter-aside {
+    display: block; position: fixed;
+    margin: 0; padding: 0;
+    @include gpu_render;
+    .aside-inner {
+        display: block; position: relative;
+        margin: 0; padding: 0 0 70px;
+        width: 100%; height: 100%;
+        // overflow-y: auto;
+    }
+}
+
+.main-aside   { z-index: 3; }
+.filter-aside { z-index: 1; }
+.main-content { z-index: 15; }
+.right-aside  { z-index: 75; }
+.app-logo     { z-index: 105; }
+
+
+.main-aside, .filter-aside, .main-content, .right-aside, .app-logo {
+    @include transition(all 1s ease);
+}
+body { @include transition(padding 1s ease); min-height: 100%; }
+
+
+.main-content {
+    display: block; position: relative;
+    margin: 0; padding: 0;
+    width: 100%; 
+    height: auto; min-height: 100%;
+    background: $main-bg;
+    transform: translateX( 0 ) ;
+}
+
+.main-aside {
+    left: 0; top: 0; bottom: 0;
+    width: $appAside-width;
+    background: $appAside-bg;
+    color: $appAside-color;
+    // font-size: $font-size-large;
+
+    transform: translateX(-.5 * $appAside-width) ;
+    @include asideScrollBar;
+
+    hr {
+        margin: 5px 0;
+    }
+
+
+    .bottom-btn {
+        position: absolute;
+        left: 20px; bottom: 20px; right: 20px;
+        .small_labl { display: none; }
+    }
+
+    &.admin {
+        @include antialiased_text;
+
+        background: $appAside-admin-bg;
+        color: $appAside-admin-color;
+        a.aside_lnk, .aside_lnk a {
+            background: $appAside-admin-bg;
+            color: $appAside-admin-color;
+            &.current, &.active { color: $brand-color; }
+            &:hover {
+                background: #000;
+            }
+        }
+        .aside_lnk .aside_nav {
+            background: rgba(255,255,255, .11);
+            li a {
+                background: transparent;
+                color: #f3f2f2;
+                &:hover { background: #000; }
+                .icn, .labl { color: #ccc; }
+                &.current, &.active {
+                    .icn, .labl { color: $brand-color; }
+                }
+            }
+        }
+
+        hr {
+            margin: 5px;
+            border-top-color: #000;
+            border-bottom-color: rgba(255,255,255,.07);
+        }
+    }
+
+}
+
+
+.app-logo {
+    display: block; position: fixed;
+    @include gpu_render;
+    background: #000;
+    color: #fff;
+    line-height: 30px;
+    // font-size: $font-size-xl;
+    padding: 10px 0;
+    top: 0; right: 0; bottom: auto; left: 0;
+    text-align: center;
+    transform: translateX( 0 ) ;
+
+    .toggl {
+        font-size: 20px;
+        width: 50px;
+        float: left;
+        text-align: center;
+        cursor: pointer;
+    }
+    .short-labl { display: none; }
+    .labl { display: block; }
+}
+
+
+.filter-aside {
+    left: auto; bottom: 0; right: 0;
+    top: 0;
+    width: $filterAside-width;
+    background: #999;
+    transform: translateX(.5 * $filterAside-width) ;
+}
+
+
+
+.right-aside {
+    background: #fff;
+    border: solid 1px $main-border-color;
+    border-radius: 3px;
+    right: 10px; top: 10px; bottom: 10px;
+    width: $infoAside-width;
+    z-index: 500;
+    transform: translateX($infoAside-width + $infoAside-margin) ;
+
+    .header {
+       line-height: 30px;
+       padding: 10px;
+       // font-size: $font-size-large;
+       color: $blue;
+       border-bottom: solid 1px #ccc;
+       h1, h2, h3, h4 {
+         // font-size: $font-size-large;
+         line-height: 30px;
+         padding: 0;
+         margin: 0;
+       }
+       .close {
+           display: block; position: absolute;
+           top: 7px; right: 7px;
+           width: 20px; height: 20px;
+           line-height: 20px;
+           text-align: center; vertical-align: middle;
+           text-shadow: 0 0 0 transparent;
+       }
+       &.with_avatar {
+           padding-right: 25px;
+           img.avatar {
+               max-width: 40px;
+               float: left;
+               margin: 0 7px 0 0;
+           }
+           h1, h2, h3, h4 {
+               line-height: 40px;
+           }
+       }
+    }
+    .body {
+      padding: 10px;
+      table.facts { margin: 0 auto; }
+    }
+}
+
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
+// Mobile:
+body {
+    // mobile .. space for app-logo
+    &.app { padding-top: 50px; }
+    
+    // mobile .. space for important_notice
+    &.with_important_notice {
+        &.app { padding-top: 80px; }
+        .app-logo { top: 30px; }
+        .main-aside { top: 30px; }
+        .right-aside { top: 90px; } // mmobile ( important_notice + app-logo )
+        &.with_info_aside {
+            .right-aside { transform: translateX( 0 ) ; }
+        }
+    }
+    
+    // mobile .. main-aside is open
+    &.with_open_aside {
+        .main-content { transform: translateX( $appAside-width ) ; }
+        .main-aside {
+            transform: translateX( 0 ) ;
+        }
+        .app-logo {
+            transform: translateX( $appAside-width ) ;
+            .toggl { color: #069; }
+        }
+    }
+    &.with_filter_aside {
+        .filter-aside { transform: translateX( 0 ) ; }
+        // see step-xs-only !!!
+        // .main-content { transform: translateX( -1 * $filterAside-width ) ; }
+        // .app-logo { transform: translateX( -1 * $filterAside-width ) ; }
+    }
+    &.with_info_aside {
+        .right-aside {
+          transform: translateX( 0 ) ;
+        }
+    }
+    
+}
+
+
+
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
+@include responsiveStep-sm {
+    body {
+        &.app {
+            padding-top: 0;
+            padding-left: $appAside-icn-width;
+            
+            .main-aside { top: 50px; }
+            .right-aside { top: 10px; }
+            .filter-aside { left: $appAside-icn-width; top: 0; transform: translateX( -0.5 * $filterAside-width ) ; }
+            &.with_filter_aside { 
+                padding-left: $appAside-icn-width + $filterAside-width; 
+                .filter-aside { transform: translateX( 0 ) ; }
+                 .main-content { transform: translateX( 0 ) ; }
+            }
+            &.with_important_notice {
+                padding-top: 30px;
+                .main-aside { top: 80px; }
+                .right-aside { top: 40px; }
+            }
+            
+        }
+        &.with_open_aside {
+            .main-content { transform: translateX( 0 ) ; }
+            .main-aside { transform: translateX( 0 ) ; }
+            .app-logo { transform: translateX( 0 ) ; }
+        }
+    }
+    
+    .app-logo {
+        width: $appAside-icn-width;
+        text-align: center;
+        .toggl { display: none; }
+        .labl { display: none; }
+        .short-labl { display: block; }
+        // &:hover {
+        //     .labl { display: block; }
+        //     .short-labl { display: none; }
+        //     width: $appAside-width;
+        //     @include border-right-radius( 5px );
+        // }
+    }
+    .main-aside {
+        width: $appAside-icn-width;
+        .labl { display: none; }
+        transform: translateX(0) ;
+
+        // &:hover, &:active {
+        //     width: $appAside-width;
+        //     .labl { display: block; }
+        // }
+
+        // .aside_lnk:hover {
+        //     width: $appAside-width;
+        //     .labl { display: block; }
+        //     @include border-right-radius( 5px );
+        // }
+
+    }
+    
+}
+
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
+@include responsiveStep-md {
+
+    body.app {
+        padding-left: $appAside-width;
+        .filter-aside { left: $appAside-width - $filterAside-width / 2; }
+        &.with_filter_aside {
+            .filter-aside { left: $appAside-width; }
+            padding-left: $appAside-width + $filterAside-width;
+        }
+        &.with_info_aside {
+            padding-right: $infoAside-width + 0.65rem;
+
+            .right-aside {
+              transform: translateX( 0 ) ;
+            }
+
+        }
+    }
+
+    .app-logo {
+        width: $appAside-width;
+        text-align: left;
+        .toggl { display: none; }
+        padding: 10px 20px;
+        .labl { display: block; }
+        .short-labl { display: none; }
+    }
+    
+    .filter-aside { left: $appAside-width; }
+    
+    .main-aside {
+        width: $appAside-width;
+        .labl { display: block; }
+        .aside_lnk:hover {
+            border-radius: 0;
+        }
+    }
+    
+    
+    .form-page-table {
+        display: table;
+        width: 100%;
+        & > .cell {
+            display: table-cell;
+            padding: 0 20px;
+            &:first-child { padding-left: 0; }
+            &:last-child { padding-right: 0; }
+            &.form {
+                width: 60%;
+                max-width: 600px;
+            }
+            &.helper {
+                width: 40%;
+                text-align: left;
+            }
+        }
+    }
+    
+}
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
+@include responsiveStep-lg {
+
+    .form-page-table > .cell {
+        &.form { width: 50%; }
+        &.helper { width: 50%; }
+    }
+
+}
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
+@include responsiveStep-xl {
+
+    .form-page-table > .cell {
+        &.form { width: 40%; }
+        &.helper { width: 60%; }
+    }
+
+}
+
+
+
+
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
+// // // // // // // // // // // // // // // //        only - steps        // // // // // // // // // // // // // // // // // 
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
+@include responsiveStep-xs-only {
+    
+    body.app {
+        &.with_filter_aside {
+            .main-content { transform: translateX( -1 * $filterAside-width ) ; }
+            .app-logo { transform: translateX( -1 * $filterAside-width ) ; }
+        }
+    }
+    
+}
+@include responsiveStep-sm-only {
+    
+    .main-aside {
+
+        .bottom-btn {
+            left: 10px; bottom: 20px; right: 10px;
+            padding: 2px 2px 5px;
+            // font-size: $font-size-large; 
+            // font-weight: 600;
+            .small_labl { display: block !important; }
+            .big_labl { display: none; }
+        }
+
+    }
+}
+
+

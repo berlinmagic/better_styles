@@ -11,7 +11,7 @@
     <div class="table-row">
       <div class="cell body fill">
         <div class="corset center">
-          <%= image_tag "paperplane-blue3.png", id: "paperplane" %>
+          <%= render "shared/paperplane_pic" %>
           <div class="clearfix"></div>
           <br/>
           <h1 class="display brand5-clr">better styles <small><%= BetterStyles::VERSION %></small></h1>
@@ -30,6 +30,14 @@
   <div id="main_stage">
     
     <div id="aside">
+      <%= link_to "/", class: "aside_lnk" do %>
+        <div class="icn">
+          <%= btricon("paperplane2") %>
+        </div>
+        <div class="label">
+          Better-Styles
+        </div>
+      <% end %>
       <% 25.times do |x| %>
         <a class="aside_lnk">
           <div class="icn">
@@ -43,14 +51,15 @@
     </div>
     
     <div id="stage">
+      
+      <div class="aside_toggle" id="aside_toggle">
+        <i class='bettericon-text-block'></i>
+      </div>
+      
       <div class="section">
         <div class="corset">
         
-          <% 15.times do |x| %>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          <% end %>
+          <%= render "shared/lorems" %>
         
         </div>
       </div>

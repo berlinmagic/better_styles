@@ -1,0 +1,177 @@
+$fontSize:      1rem;
+$lineHeight:    1.42em;
+$activeColor:   $brand-color;
+$currentBG:     $white;
+$navColor:      $text-gray;
+$hoverBG:       $white;
+$hoverColor:    $brand-color;
+$borderColor:   $main-border-color;
+$subNavBG:      rgba(0,0,0,.05);
+
+.nav_list, .nav-list {
+  &, & > li, .sub_nav, .sub_nav li, a, span.lst_lnk , p.lst_lnk {
+    display: block; position: relative;
+    margin: 0; padding: 0;
+  }
+  &, & > li, .sub_nav, .sub_nav li {
+    list-style: none;
+  }
+}
+
+
+.nav_list, .nav-list {
+  
+  font-size: $fontSize;
+  
+  li {
+    border: none;
+    
+    a, span.lst_lnk, p.lst_lnk {
+      padding: 0.8em 0.6em;
+      line-height: $lineHeight;
+      text-decoration: none;
+      color: $navColor;
+      .label {
+        font-size: inherit; line-height: inherit; color: inherit; 
+        margin-left: 10px; margin-top: -1px;
+        text-align: center;
+        float: right;
+        width: 2.5em;
+        border: solid 1px $borderColor;
+        border-radius: 80px;
+      }
+    }
+    a:hover, a:focus {
+      background: $hoverBG;
+      color: $hoverColor;
+    }
+    
+    .sub_nav {
+      display: none;
+      background: $subNavBG;
+      li {
+        a, span.lst_lnk, p.lst_lnk {
+            padding: 0.5em 0.6em;
+            font-size: 0.9em;
+        }
+        .sub_nav {
+          li {
+            a, span.lst_lnk, p.lst_lnk {
+                padding: 0.3em 0.6em;
+            }
+          }
+        }
+      }
+    }
+    
+    &.active {
+        & > a {
+            font-weight: $bold;
+        }
+	      & > .sub_nav { display: block; }
+    }
+    &.current > a { 
+      color: $activeColor;
+      background: $currentBG;
+    }
+    
+    &.arrow {
+      
+    }
+    
+  }
+  
+  
+  
+  // some other styles
+  &.lined {
+    li + li {   border-top: solid 1px $borderColor; }
+    .sub_nav {  border-top: solid 1px $borderColor; }
+  }
+  
+  &.pressed {
+    // background: $white;
+    li {
+      &.current, &.active {
+        padding-left: 3px;
+        & > a {
+          // background: $white;
+        }
+        .sub_nav > li { padding-left: 3px; }
+      }
+    }
+  }
+  
+  &.color-pressed {
+    // background: $white;
+    li {
+      &.current, &.active {
+        
+        &:before {
+          display: block; position: absolute;
+          margin: 0; padding: 0;
+          content: "";
+          top: 0; left: 0; bottom: 0;
+          width: 3px;
+          background: $activeColor;
+        }
+        padding-left: 3px;
+        & > a {
+          // background: $white;
+        }
+      }
+    }
+    .sub_nav { padding-left: 1px; }
+  }
+  
+  &.nice {
+    li .sub_nav {
+      overflow: hidden;
+			&:before, &:after {
+				display: block; position: absolute; content: "";
+				margin: 0; padding: 0;
+				z-index: 3;
+        left: -10px; right: -10px;
+        height: 5px;
+			}
+			&:before {
+				top: -7px; 
+				box-shadow: 0  2px 7px 0 rgba(0,0,0,.35);
+			}
+			&:after {
+				bottom: -7px;
+				box-shadow: 0 -2px 7px 0 rgba(0,0,0,.35);
+			}
+    }
+  }
+  
+  
+  &.arrowed li a, li.arrow > a {
+    padding-right: 2.5em;
+    &:after {
+        display: block;
+        position: absolute;
+        top: 0; right: 0; bottom: 0;
+        padding: inherit;
+        @include horizontal-padding( 0 );
+        text-align: center;
+        width: 1.5em;
+        line-height: $line-height-computed + 10;
+        content: "\e920";
+        font-family: 'betterwork-icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.6em;
+        line-height: .9;
+    }
+  }
+  &.arrowed li.active > a, li.arrow.active > a {
+    &:after { content: "\e91f"; }
+  }
+  
+  
+  &.shiny {
+      @include single_shine( rgba(0, 0, 0, 0.13), 2, right, 1px, 10px, 5px, 80 );
+  }
+  
+}

@@ -12,22 +12,22 @@ body {
     }
     
     &.with_aside {
-        // #front_banner { @include transform( translateX( $aside-width ) ); }
+        // #front_banner { transform: translateX( $aside-width ) ; }
         margin-left: $aside-width;
         margin-right: -1 * $aside-width;
-        // @include transform( translateX( $aside-width ) );
+        // transform: translateX( $aside-width ) ;
         
-        // @include transform( translateX( $aside-width ) );
+        // transform: translateX( $aside-width ) ;
         #main_stage #aside {
             transform: translateX( 0 ) ;
-            // @include transform( translateX( -1 * $aside-width ) );
+            // transform: translateX( -1 * $aside-width ) ;
         }
         
         &.fixed-nav {
             #main_stage #aside { top: 50px; }
         }
         // #main_stage #stage {
-        //     @include transform( translateX( $aside-width ) );
+        //     transform: translateX( $aside-width ) ;
         // }
         #aside_toggle {
             position: fixed;

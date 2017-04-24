@@ -28,8 +28,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sprockets-rails', '>= 2.1.3'
   s.add_development_dependency 'jquery-rails',    '>= 3.1.0'
   s.add_development_dependency 'coffee-rails'
+  s.add_development_dependency "non-stupid-digest-assets"
   s.add_development_dependency 'eco'
   s.add_development_dependency 'uglifier'
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'zeroclipboard-rails'
   
 end

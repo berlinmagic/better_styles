@@ -1,21 +1,22 @@
 class PagesController < ApplicationController
   
-  TEMPLATES = %w(scroll_to_fix_aside)
+  TEMPLATES = %w(icon_aside fixed_aside_to_header scroll_to_fix_aside)
   
   def start
     Rails.logger.info "Front - Start"
+    @body_class = "main_template"
     get_title()
   end
   
   def templates
     Rails.logger.info "Front - templates"
     if params[:template] && TEMPLATES.include?(params[:template].to_s)
-      tmpl = "#{params[:template]}"
+      @template = "#{params[:template]}"
     else
-      tmpl = "slidebar-header"
+      @template = "slidebar-header"
     end
-    get_title(tmpl)
-    render "templates/#{tmpl}", layout: "blank"
+    get_title(@template)
+    render "templates/#{@template}", layout: "blank"
   end
   
   def cache
@@ -23,11 +24,13 @@ class PagesController < ApplicationController
     TEMPLATES.each do |tmpl|
       File.open(File.join(directory, "#{tmpl}.html"), 'w') do |f|
         get_title(tmpl)
+        @template = tmpl
         f.puts render_to_string("templates/#{tmpl}", layout: "blank")
       end
     end
     File.open(File.join(directory, "index.html"), 'w') do |f|
       get_title()
+      @body_class = "main_template"
       f.puts render_to_string("front/start")
     end
     redirect_to root_path, notice: "Caching is done!"

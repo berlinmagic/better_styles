@@ -11,6 +11,7 @@
 @import "better/lib/helpers";
 @import "better/lib/media_querries";
 @import "better/lib/nav";
+@import "better/lib/shadows";
 @import "better/lib/text";
 
 
@@ -24,9 +25,13 @@
 @import "better/content/box";
 @import "better/content/divider";
 @import "better/content/helpers";
-@import "better/content/navigation";
-// @import "better/content/pix";
+@import "better/content/pix";
 @import "better/content/typography";
+
+
+// import navigations:
+@import "better/navigations/aside_lnk";
+@import "better/navigations/nav_list";
 
 
 // import icons:

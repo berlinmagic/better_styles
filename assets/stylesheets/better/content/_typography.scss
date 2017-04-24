@@ -1,5 +1,7 @@
 @each $txtName, $txtSize in $textSizes {
-    .#{$txtName}, .txt-#{$txtName}, .#{$txtName}-txt  {
+    // .#{$txtName}, .txt-#{$txtName}, .#{$txtName}-txt  {
+    .txt-#{$txtName}, .#{$txtName}-txt,
+    .text-#{$txtName}, .#{$txtName}-text  {
         font-size: #{ $txtSize };
         color: $text-black;
         &.secondary, &.light { color: $text-gray; }
@@ -10,7 +12,8 @@
 
 
 // Bold text
-strong, *.bold, label, th { font-weight: $bold !important; }
+// strong, *.bold, label, th { font-weight: $bold !important; }
+strong, *.bold, *.strong { font-weight: $bold !important; }
 
 // Semi-Bold text
 .semi   { font-weight: $semi !important; }

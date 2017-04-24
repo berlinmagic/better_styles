@@ -1,0 +1,9 @@
+<% for that in [0..9]: %>
+  <div class="section brand<%= that %>">
+    <div class="corset center">
+      <p class="title-txt">.section<%= if that > 0 then ".brand#{ that }" else "" %> p.title</p>
+      <p class="title-txt secondary">.section.brand<%= that %> p.title.secondary</p>
+      <p class="title-txt disabled">.section.brand<%= that %> p.title.disabled</p>
+    </div>
+  </div>
+<% end %>

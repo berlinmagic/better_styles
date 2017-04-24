@@ -1,0 +1,5 @@
+<iframe src="<%= "#{rootPath()}scroll_to_fix_aside" %>" name="Template_frame" id="mainFrame">
+  <p>Sorry, your Browser doesn't like Frames.
+  But we would need an iframe to show the template stuff
+  <a href="/scroll_to_fix_aside">Scroll to fix Aside</a></p>
+</iframe>

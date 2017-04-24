@@ -1,0 +1,47 @@
+<div class="section">
+  <div class="corset">
+    
+    <div class="row">
+      <% for styling in ["", "secondary", "disabled"]: %>
+        <div class="col">
+          
+          <p class="brand2-clr"><%= if styling != "" then ".#{styling}" else "default" %>:</p>
+          
+          
+          <% for font in ["display", "headline", "title", "subheader", "body", "caption", "small"]: %>
+            <p class="txt-<%= font %> <%= styling %>"><%= font.titleize() %> <small></small></p>
+          <% end %>
+          
+        </div>
+      <% end %>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="section hard-top">
+  <div class="corset">
+    
+    <h3 class="brand-clr">BootStrap:</h3>
+    
+    <hr/>
+    
+    <% for n in [1..6]: %>
+      <h<%= n %>>h<%= n %> Hello World <small>small</small> <strong>strong</strong></h<%= n %>>
+    <% end %>
+    
+    <hr/>
+    
+    <p>p - Paragraph</p>
+    <p class="lead">p.lead - Paragraph</p>
+    
+    <hr/>
+    
+    <p class="display-1">Display 1</p>
+    <p class="display-2">Display 2</p>
+    <p class="display-3">Display 3</p>
+    <p class="display-4">Display 4</p>
+    
+  </div>
+</div>

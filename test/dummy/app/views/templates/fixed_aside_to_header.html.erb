@@ -1,0 +1,116 @@
+<body class="main_template">
+  <a href="#" id="mobile_header" class="inline_table center_text">
+    <div class="cell icn col-1 middle">
+      <i class="olicons-show-sb"></i>
+    </div>
+    <div class="cell col-10 middle">
+      <span id="current-view-name">Better-Stylez</span>
+    </div>
+    <div class="cell icn col-1 middle">
+      <i class="olicons-show-sb"></i>
+    </div>
+  </a>
+  
+  <div id="aside">
+    <div class="aside-content">
+      .nav_list
+      <ul class="nav_list flat">
+        <li><%= link_to "Better-Stylez", "/" %></li>
+        <% 5.times do |x| %>
+          <li><%= link_to "Aside Link #{ x + 1 }", "#", class: "lst_lnk", data: {target: ""} %></li>
+        <% end %>
+        <li><%= link_to "Sub-Nav", "#", class: "lst_lnk" %>
+          <ul class="sub_nav">
+            <% 5.times do |x| %>
+              <li><%= link_to "Sub Link #{ x + 1 }", "#", class: "lst_lnk", data: {target: ""} %></li>
+            <% end %>
+            <li><%= link_to "Sub-Sub-Nav", "#", class: "lst_lnk" %>
+              <ul class="sub_nav">
+                <% 5.times do |x| %>
+                  <li><%= link_to "Sub Sub Link #{ x + 1 }", "#", class: "lst_lnk", data: {target: ""} %></li>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <% 5.times do |x| %>
+          <li>
+            <%= link_to "#", class: "lst_lnk", data: {target: ""} do %>
+              Aside Link <span class="label"><%= x + 6 %></span>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+      <br/>
+      
+      .nav_list.pressed
+      <ul class="nav_list pressed">
+        <li><%= link_to "Better-Stylez", "/" %></li>
+        <% 5.times do |x| %>
+          <li><%= link_to "Aside Link #{ x + 1 }", "#", class: "lst_lnk", data: {target: ""} %></li>
+        <% end %>
+        <li><%= link_to "Sub-Nav", "#", class: "lst_lnk" %>
+          <ul class="sub_nav">
+            <% 5.times do |x| %>
+              <li><%= link_to "Sub Link #{ x + 1 }", "#", class: "lst_lnk", data: {target: ""} %></li>
+            <% end %>
+            <li><%= link_to "Sub-Sub-Nav", "#", class: "lst_lnk" %>
+              <ul class="sub_nav">
+                <% 5.times do |x| %>
+                  <li><%= link_to "Sub Sub Link #{ x + 1 }", "#", class: "lst_lnk", data: {target: ""} %></li>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <% 5.times do |x| %>
+          <li><%= link_to "Aside Link #{ x + 6 }", "#", class: "lst_lnk", data: {target: ""} %></li>
+        <% end %>
+      </ul>
+      <br/>
+      
+      <ul class="nav_list arrowed">
+        <li><%= link_to "Better-Stylez", "/" %></li>
+        <% 5.times do |x| %>
+          <li><%= link_to "Aside Link #{ x + 1 }", "#", class: "lst_lnk", data: {target: ""} %></li>
+        <% end %>
+        <li><%= link_to "Sub-Nav", "#", class: "lst_lnk" %>
+          <ul class="sub_nav">
+            <% 5.times do |x| %>
+              <li><%= link_to "Sub Link #{ x + 1 }", "#", class: "lst_lnk", data: {target: ""} %></li>
+            <% end %>
+            <li><%= link_to "Sub-Sub-Nav", "#", class: "lst_lnk" %>
+              <ul class="sub_nav">
+                <% 5.times do |x| %>
+                  <li><%= link_to "Sub Sub Link #{ x + 1 }", "#", class: "lst_lnk", data: {target: ""} %></li>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <% 5.times do |x| %>
+          <li><%= link_to "Aside Link #{ x + 6 }", "#", class: "lst_lnk", data: {target: ""} %></li>
+        <% end %>
+      </ul>
+    
+      <a href="https://github.com/berlinmagic/magic_stylez/tree/master" target="_blank" class="btn btn-default btn-divided">
+        <span class="icn"><i class="icomoon-github3"></i></span>
+        <span>SourceCode</span>
+      </a>
+      <div class="clearfix"></div>
+      <br/>
+    </div>
+  </div>
+  
+  <div class="clearfix"></div>
+  <div id="app_content">
+    
+    <div class="section">
+      <div class="corset">
+        <%= render "shared/lorems" %>
+      </div>
+    </div>
+    
+  </div>
+  <div class="clearfix"></div>
+</body>

@@ -13,6 +13,12 @@ module Dummy
     # -- all .rb files in that directory are automatically loaded.
     
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+    
+    # compile template css
+    config.assets.precompile += %w( templates/fixed_aside_to_header.css )
+    config.assets.precompile += %w( templates/icon_aside.css )
+    config.assets.precompile += %w( templates/scroll_to_fix_aside.css )
+    
     # config.assets.precompile += %w(blank.js)
     
   end

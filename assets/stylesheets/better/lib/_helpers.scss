@@ -25,3 +25,25 @@
 @mixin rotation( $rotate ) {
 	transform: rotate(#{ $rotate }deg);
 }
+
+
+
+@mixin elipse( $first, $second ) {
+	border-radius: #{ $first }px / #{ $second }px;
+}
+@mixin elipsis( $first, $second ) {
+	border-radius: #{percentage($first)} / #{percentage($second)} ;
+}
+
+
+@mixin gpu_render {
+	// old style (bourbon)
+	// transform: translateZ( 0 ) ;
+	// twbs
+	// @include translate3d(0, 0, 0);
+	// bourbon
+	// there is a chrome bug with that ... http://codepen.io/herzflimmern/blog/chrome-bug-with-fixed-background-and-translate3d
+	transform:translate3d(0,0,0);
+	// transform: translate(0,0) ;
+}
+
