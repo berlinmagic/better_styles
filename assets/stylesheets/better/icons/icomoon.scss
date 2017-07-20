@@ -11,11 +11,11 @@ $icomoon-class-name: "icomoon";
 
 @font-face {
   font-family: 'icomoon';
-	src: 	url('#{$icomoon-font-path}#{$icomoon-font-name}.eot');
-  src: 	url('#{$icomoon-font-path}#{$icomoon-font-name}.eot#iefix') format('embedded-opentype'),
-			  url('#{$icomoon-font-path}#{$icomoon-font-name}.woff') format('woff'),
-			  url('#{$icomoon-font-path}#{$icomoon-font-name}.ttf') format('truetype'),
-			  url('#{$icomoon-font-path}#{$icomoon-font-name}.svg##{$icomoon-font-svg-id}') format('svg');
+	src: 	asset-url('#{$icomoon-font-path}#{$icomoon-font-name}.eot');
+  src: 	asset-url('#{$icomoon-font-path}#{$icomoon-font-name}.eot#iefix') format('embedded-opentype'),
+			  asset-url('#{$icomoon-font-path}#{$icomoon-font-name}.woff') format('woff'),
+			  asset-url('#{$icomoon-font-path}#{$icomoon-font-name}.ttf') format('truetype'),
+			  asset-url('#{$icomoon-font-path}#{$icomoon-font-name}.svg##{$icomoon-font-svg-id}') format('svg');
     font-weight: normal;
     font-style: normal;
 

@@ -10,14 +10,14 @@ $bettericons-class-name: "bettericon";
 
 @font-face {
   font-family: 'betterwork-icons';
-	src: url('#{$bettericons-font-path}#{$bettericons-font-name}.eot');
+	src: asset-url('#{$bettericons-font-path}#{$bettericons-font-name}.eot');
 }
 
 @font-face {
     font-family: 'betterwork-icons';
-    src: 	url('#{$bettericons-font-path}#{$bettericons-font-name}.woff') format('woff'),
-			    url('#{$bettericons-font-path}#{$bettericons-font-name}.ttf') format('truetype'),
-			    url('#{$bettericons-font-path}#{$bettericons-font-name}.svg##{$bettericons-font-svg-id}') format('svg');
+    src:  asset-url('#{$bettericons-font-path}#{$bettericons-font-name}.woff') format('woff'),
+			    asset-url('#{$bettericons-font-path}#{$bettericons-font-name}.ttf') format('truetype'),
+			    asset-url('#{$bettericons-font-path}#{$bettericons-font-name}.svg##{$bettericons-font-svg-id}') format('svg');
     font-weight: normal;
     font-style: normal;
 

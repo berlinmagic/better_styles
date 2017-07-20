@@ -11,14 +11,14 @@ $olicons-class-name: "olicons";
 
 @font-face {
   font-family: 'orderlifticonsregular';
-	src: url('#{$olicons-font-path}#{$olicons-font-name}.eot');
+	src: asset-url('#{$olicons-font-path}#{$olicons-font-name}.eot');
 }
 
 @font-face {
   font-family: 'orderlifticonsregular';
-  src: 	url('#{$olicons-font-path}#{$olicons-font-name}.woff') format('woff'),
-			  url('#{$olicons-font-path}#{$olicons-font-name}.ttf') format('truetype'),
-			  url('#{$olicons-font-path}#{$olicons-font-name}.svg##{$olicons-font-svg-id}') format('svg');
+  src: 	asset-url('#{$olicons-font-path}#{$olicons-font-name}.woff') format('woff'),
+			  asset-url('#{$olicons-font-path}#{$olicons-font-name}.ttf') format('truetype'),
+			  asset-url('#{$olicons-font-path}#{$olicons-font-name}.svg##{$olicons-font-svg-id}') format('svg');
   font-weight: normal;
   font-style: normal;
 }

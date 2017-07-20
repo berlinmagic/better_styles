@@ -34,6 +34,7 @@ class PagesController < ApplicationController
       get_title()
       @body_class = "main_template"
       @show_btns = false
+      @template = false
       f.puts render_to_string("pages/start")
     end
     redirect_to root_path, notice: "Caching is done!"
