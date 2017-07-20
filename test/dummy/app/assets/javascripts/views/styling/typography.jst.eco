@@ -1,3 +1,9 @@
+<div class="section head">
+  <div class="corset">
+    <h1>Typographie <small class="text-muted">Better-Styles:</small></h1>
+  </div>
+</div>
+
 <div class="section">
   <div class="corset">
     
@@ -20,12 +26,14 @@
   </div>
 </div>
 
+<div class="section head">
+  <div class="corset">
+    <h1>Typographie <small class="text-muted">BootStrap v. 4.x:</small></h1>
+  </div>
+</div>
+
 <div class="section hard-top">
   <div class="corset">
-    
-    <h3 class="brand-clr">BootStrap:</h3>
-    
-    <hr/>
     
     <% for n in [1..6]: %>
       <h<%= n %>>h<%= n %> Hello World <small>small</small> <strong>strong</strong></h<%= n %>>

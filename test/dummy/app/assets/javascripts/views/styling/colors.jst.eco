@@ -1,3 +1,9 @@
+<div class="section head">
+  <div class="corset">
+    <h1>Colors <small class="text-muted">Available Colors:</small></h1>
+  </div>
+</div>
+
 <% for that in [0..9]: %>
   <div class="section brand<%= that %>">
     <div class="corset center">

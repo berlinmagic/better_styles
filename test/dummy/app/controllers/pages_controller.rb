@@ -31,7 +31,7 @@ class PagesController < ApplicationController
     File.open(File.join(directory, "index.html"), 'w') do |f|
       get_title()
       @body_class = "main_template"
-      f.puts render_to_string("front/start")
+      f.puts render_to_string("pages/start")
     end
     redirect_to root_path, notice: "Caching is done!"
   end

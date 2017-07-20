@@ -32,6 +32,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'eco'
   s.add_development_dependency 'uglifier'
   s.add_development_dependency "sqlite3"
-  s.add_development_dependency 'zeroclipboard-rails'
+  # s.add_development_dependency 'zeroclipboard-rails'
   
 end

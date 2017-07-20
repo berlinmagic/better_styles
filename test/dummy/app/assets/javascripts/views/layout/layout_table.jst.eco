@@ -27,7 +27,7 @@
     <div class="layout-table grid">
       <div class="cell col-5">
         <div class="pic">
-          <img src="<%= assetPath("magic/bgs/rain-flower.jpg") %>" />
+          <img src="<%= assetPath("pix/rain-flower.jpg") %>" />
         </div>
       </div>
       <div class="cell col-7 top">
@@ -55,7 +55,7 @@
       </div>
       <div class="cell col-5">
         <div class="pic">
-          <img src="<%= assetPath("magic/bgs/seucide.jpg") %>" />
+          <img src="<%= assetPath("pix/seucide.jpg") %>" />
         </div>
       </div>
     </div>
@@ -69,7 +69,7 @@
     <div class="layout-table grid">
       <div class="cell col-5">
         <div class="pic">
-          <img src="<%= assetPath("magic/bgs/rain-flower.jpg") %>" />
+          <img src="<%= assetPath("pix/rain-flower.jpg") %>" />
         </div>
       </div>
       <div class="cell col-7 bottom">

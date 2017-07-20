@@ -4,11 +4,12 @@
     .text-#{$txtName}, .#{$txtName}-text  {
         font-size: #{ $txtSize };
         color: $text-black;
+        font-weight: map-get($textWeights, $txtName);
         &.secondary, &.light { color: $text-gray; }
         &.disabled, &.lighter, &.off { color: $text-gray-light; }
+        &.bold, &.strong, & > b, & > strong { font-weight: map-get($textBoldWeights, $txtName); }
     }
 }
-
 
 
 // Bold text

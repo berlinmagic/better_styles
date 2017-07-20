@@ -23,6 +23,25 @@ html, body, #body {
     &.dark {    background: rgba(0,0,0,.23); }
   }
   
+	&.mobile {
+		height: 100%;
+		display: table;
+		top: 0; left: 0;
+		// z-index: 1;
+		& > .table-row {
+			display: table-row;
+			& > * {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			&.top, &.top > * { vertical-align: top; }
+			&.middle, &.middle > * { vertical-align: middle; }
+			&.bottom, &.bottom > * { vertical-align: bottom; }
+		}
+		.fill { height: 100%; }
+    &.max-size { max-height: 800px; }
+	}
+  
 }
 
 

@@ -13,6 +13,7 @@ appImages = <%= imgs.to_json %>
 
 @BetterStylesVersion = "<%= BetterStyles::VERSION %>"
 
+
 # console.log "appImages", appImages
 
 @assetPath = (path) ->
@@ -23,7 +24,7 @@ appImages = <%= imgs.to_json %>
 @rootPath = ->
   # if App.Environment == "production"
   if window.location.hostname == "berlinmagic.github.io"
-    return "/magic_stylez/"
+    return "/better_styles/"
   else
     return "/"
 
