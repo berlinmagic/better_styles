@@ -1,5 +1,0 @@
-<iframe src="<%= "#{rootPath()}icon_aside" %>" name="Template_frame" id="mainFrame">
-  <p>Sorry, your Browser doesn't like Frames.
-  But we would need an iframe to show the template stuff
-  <a href="/icon_aside">Fixed Subnav</a></p>
-</iframe>
