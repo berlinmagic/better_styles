@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   TEMPLATES = %w(icon_aside fixed_aside_to_header scroll_to_fix_aside)
   
   def start
+    Rails.cache.clear
     Rails.logger.info "Front - Start"
     @body_class = "main_template"
     @show_btns = true
