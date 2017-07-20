@@ -1,4 +1,4 @@
-<% if Rails.env.production? %>
+<% if Rails.env.production? && @show_btns && @show_btns == true %>
 <div style="display: block; position: fixed; top: 0; right: 0; background: rgba(0,0,0,.25); color: #fff; z-index: 1111; padding: 10px 30px;">
   
   <a class="btn btn-warning pull-right" href="/cache_pages">

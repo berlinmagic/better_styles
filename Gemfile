@@ -19,3 +19,4 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem "non-stupid-digest-assets"

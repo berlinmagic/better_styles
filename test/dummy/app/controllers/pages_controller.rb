@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   def start
     Rails.logger.info "Front - Start"
     @body_class = "main_template"
+    @show_btns = true
     get_title()
   end
   
@@ -31,6 +32,7 @@ class PagesController < ApplicationController
     File.open(File.join(directory, "index.html"), 'w') do |f|
       get_title()
       @body_class = "main_template"
+      @show_btns = false
       f.puts render_to_string("pages/start")
     end
     redirect_to root_path, notice: "Caching is done!"
