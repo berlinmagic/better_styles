@@ -15,23 +15,12 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
 
   # s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
-  s.files = Dir["{lib,vendor}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{assets,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   # s.add_dependency "rails", "~> 5.0.2"
   s.add_dependency "rails",                 ">= 4.1"
   s.add_dependency 'bootstrap',             '>= 4.0.0.alpha6'
   s.add_dependency 'rails-assets-tether',   '>= 1.3.3'
   s.add_dependency 'jquery-rails',          '>= 3.1.0'
-
-  # Dummy Rails app dependencies
-  s.add_development_dependency 'json',            '>= 1.8.1'
-  s.add_development_dependency 'sprockets-rails', '>= 2.1.3'
-  s.add_development_dependency 'jquery-rails',    '>= 3.1.0'
-  s.add_development_dependency 'coffee-rails'
-  s.add_development_dependency "non-stupid-digest-assets"
-  s.add_development_dependency 'eco'
-  s.add_development_dependency 'uglifier'
-  s.add_development_dependency "sqlite3"
-  # s.add_development_dependency 'zeroclipboard-rails'
   
 end

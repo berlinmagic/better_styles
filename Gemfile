@@ -17,6 +17,17 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
+
+# Dummy Rails app dependencies
+gem 'json',            '>= 1.8.1'
+gem 'sprockets-rails', '>= 2.1.3'
+gem 'jquery-rails',    '>= 3.1.0'
+gem 'coffee-rails'
+gem "non-stupid-digest-assets"
+gem 'eco'
+gem 'uglifier'
+gem "sqlite3"
+# gem 'zeroclipboard-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem "non-stupid-digest-assets"

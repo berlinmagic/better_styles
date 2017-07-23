@@ -1,14 +1,19 @@
 # BetterStyles
-Short description and motivation.
+My older gem magic_stylez more generic, smaller and with use of bootstrap 4.0!
 
 ## Usage
-How to use my plugin.
+See [online docu](https://berlinmagic.github.io/better_styles/) here.
 
 ## Installation
-Add this line to your application's Gemfile:
+Add this lines to your application's Gemfile:
 
 ```ruby
-gem 'better_styles'
+    
+    source 'https://rails-assets.org' do
+      gem 'rails-assets-tether', '>= 1.3.3'
+    end
+    gem 'better_styles'
+    
 ```
 
 And then execute:
