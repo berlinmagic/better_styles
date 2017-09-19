@@ -21,6 +21,7 @@
 
 .press { margin-bottom: $vertical-spacing !important; }
 .half-press, .press-half { margin-bottom: $vertical-spacing-half !important; }
+.no-press, .no_press { margin-bottom: 0 !important; }
 
 
 .left_text { text-align: left !important; }
@@ -57,13 +58,16 @@
 }
 
 
-
+.1third {   width: 33.33333%; max-width: 33.33333%; }
+.2third {   width: 66.66666%; max-width: 66.66666%; }
+.thirty {   width: 50%; max-width: 50%; }
+.fourty {   width: 50%; max-width: 50%; }
 .fivty {    width: 50%; max-width: 50%; }
 .sixty {    width: 60%; max-width: 60%; }
 .seventy {  width: 70%; max-width: 70%; }
 .eighty {   width: 80%; max-width: 80%; }
 .ninty {    width: 90%; max-width: 90%; }
-.fivty, .sixty, .seventy, .eighty, .ninty { 
+.1third, .2third, .thirty, .fourty, .fivty, .sixty, .seventy, .eighty, .ninty { 
   @include horizontal-margin( auto ); 
 }
 
