@@ -58,8 +58,8 @@
 }
 
 
-.1third {   width: 33.33333%; max-width: 33.33333%; }
-.2third {   width: 66.66666%; max-width: 66.66666%; }
+.third, .third1 {   width: 33.33333%; max-width: 33.33333%; }
+.third2 {   width: 66.66666%; max-width: 66.66666%; }
 .thirty {   width: 50%; max-width: 50%; }
 .fourty {   width: 50%; max-width: 50%; }
 .fivty {    width: 50%; max-width: 50%; }
@@ -67,7 +67,7 @@
 .seventy {  width: 70%; max-width: 70%; }
 .eighty {   width: 80%; max-width: 80%; }
 .ninty {    width: 90%; max-width: 90%; }
-.1third, .2third, .thirty, .fourty, .fivty, .sixty, .seventy, .eighty, .ninty { 
+.third, .third1, .third2, .thirty, .fourty, .fivty, .sixty, .seventy, .eighty, .ninty { 
   @include horizontal-margin( auto ); 
 }
 
