@@ -1,5 +1,5 @@
 module BetterStyles
-  module Helper
+  module SupportHelper
     
     def icon( icn, txt = "" )
       raw("<i class='icomoon-#{icn}#{" #{txt}" if !txt.blank?}'></i>")
