@@ -1,0 +1,22 @@
+a.icn-lnk {
+  display: inline-block;
+  color: inherit;
+  transition: all .4s ease;
+  opacity: 0.8;
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+    opacity: 1.0;
+    &, i { transform: scale(1.1); }
+  }
+}
+
+a.icn-lnk + a.icn-lnk {
+  margin-left: .1em;
+}
+
+a.silent-lnk {
+  color: inherit;
+  &:hover, &:focus, &:active {
+    text-decoration: underline;
+  }
+}

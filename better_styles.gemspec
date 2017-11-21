@@ -15,11 +15,12 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
 
   # s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
-  s.files = Dir["{assets,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{app,assets,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   # s.add_dependency "rails", "~> 5.0.2"
   s.add_dependency "rails",                 ">= 4.1"
-  s.add_dependency 'bootstrap',             '>= 4.0.0.alpha6'
+  # s.add_dependency 'bootstrap',             '>= 4.0.0.alpha6'
+  # s.add_dependency 'bootstrap-sass',        '>= 3.3.5.1', '< 3.4'
   s.add_dependency 'rails-assets-tether',   '>= 1.3.3'
   s.add_dependency 'jquery-rails',          '>= 3.1.0'
   

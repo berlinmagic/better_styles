@@ -14,12 +14,23 @@
 @mixin vertical-padding( $pad: 5px ) {
 	padding-top: $pad; padding-bottom: $pad;
 }
+
 @mixin horizontal-margin( $pad: 5px ) {
 	margin-left: $pad; margin-right: $pad;
 }
 @mixin vertical-margin( $pad: 5px ) {
 	margin-top: $pad; margin-bottom: $pad;
 }
+
+@mixin hpadding( $pad: 5px ){  @include horizontal-padding( $pad); }
+@mixin h-padding( $pad: 5px ){  @include horizontal-padding( $pad); }
+@mixin vpadding( $pad: 5px ){  @include vertical-padding( $pad); }
+@mixin v-padding( $pad: 5px ){  @include vertical-padding( $pad); }
+
+@mixin hmargin( $pad: 5px ){  @include horizontal-margin( $pad ); }
+@mixin h-margin( $pad: 5px ){  @include horizontal-margin( $pad ); }
+@mixin vmargin( $pad: 5px ){  @include vertical-margin( $pad ); }
+@mixin v-margin( $pad: 5px ){  @include vertical-margin( $pad ); }
 
 
 @mixin rotation( $rotate ) {
@@ -33,6 +44,13 @@
 }
 @mixin elipsis( $first, $second ) {
 	border-radius: #{percentage($first)} / #{percentage($second)} ;
+}
+
+
+@mixin absoluteCentered( $size: 0 ){
+  position: absolute;
+  top:  $size; bottom: $size;
+  left: $size; right:  $size;
 }
 
 
