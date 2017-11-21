@@ -1,43 +1,46 @@
-// before sm 
+$responsive-steps: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 2000px
+) !default;
+
+
 @mixin responsiveStep-xs {
-  @include media-breakpoint-up(xs) { @content; }
+	@media only screen and (min-width: map-get($responsive-steps, xs)) { @content; }
 }
 @mixin responsiveStep-sm {
-	@include media-breakpoint-up(sm) { @content; }
+	@media only screen and (min-width: map-get($responsive-steps, sm)) { @content; }
 }
 @mixin responsiveStep-md {
-	@include media-breakpoint-up(md) { @content; }
+	@media only screen and (min-width: map-get($responsive-steps, md)) { @content; }
 }
 @mixin responsiveStep-lg {
-	@include media-breakpoint-up(lg) { @content; }
+	@media only screen and (min-width: map-get($responsive-steps, lg)) { @content; }
 }
 @mixin responsiveStep-xl {
-	@media only screen and (min-width: 1600px) {
-		@content;
-	}
+	@media only screen and (min-width: map-get($responsive-steps, xl)) { @content; }
 }
 @mixin responsiveStep-xxl {
-	@media only screen and (min-width: 2000px) {
-		@content;
-	}
+	@media only screen and (min-width: map-get($responsive-steps, xxl)) { @content; }
 }
 
 
 
 @mixin responsiveStep-xs-only {
-  @include media-breakpoint-only(xs) { @content; }
+	@media only screen and (max-width: map-get($responsive-steps, xs)) { @content; }
 }
 @mixin responsiveStep-sm-only {
-	@include media-breakpoint-only(sm) { @content; }
+	@media only screen and (min-width: map-get($responsive-steps, sm)) and (max-width: map-get($responsive-steps, md) - 1) { @content; }
 }
 @mixin responsiveStep-md-only {
-	@include media-breakpoint-only(md) { @content; }
+	@media only screen and (min-width: map-get($responsive-steps, md)) and (max-width: map-get($responsive-steps, lg) - 1) { @content; }
 }
 @mixin responsiveStep-lg-only {
-	@include media-breakpoint-only(lg) { @content; }
+	@media only screen and (min-width: map-get($responsive-steps, lg)) and (max-width: map-get($responsive-steps, xl) - 1) { @content; }
 }
 @mixin responsiveStep-xl-only {
-	@media only screen and (min-width: 1600px) and (max-width: 1999px) {
-		@content;
-	}
+	@media only screen and (min-width: map-get($responsive-steps, xl)) and (max-width: map-get($responsive-steps, xxl) - 1) { @content; }
 }
