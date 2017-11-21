@@ -32,9 +32,9 @@ $filterAside-width:     15rem;
 
 
 .main-aside, .filter-aside, .main-content, .right-aside, .app-logo {
-    @include transition(all 1s ease);
+    transition: all 1s ease;
 }
-body { @include transition(padding 1s ease); min-height: 100%; }
+body { transition: padding 1s ease; min-height: 100%; }
 
 
 .main-content {

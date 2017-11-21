@@ -74,26 +74,26 @@
 	// 
   &.hard-top {
       border-top: solid 1px $main-border-color;
-      @include box-shadow( inset 0 1px 1px 0 rgba(255,255,255,.75) );
+      box-shadow: inset 0 1px 1px 0 rgba(255,255,255,.75);
   }
 	&.hard-bottom {
       border-bottom: solid 1px rgba(255,255,255,.75);
       @include box-shadow( inset 0 -1px 1px 0 $main-border-color );
   }
 	&.hard-top.hard-bottom {
-		@include box-shadow( inset 0 1px 1px 0 rgba(255,255,255,.75), inset 0 -1px 1px 0 $main-border-color );
+		box-shadow: inset 0 1px 1px 0 rgba(255,255,255,.75), inset 0 -1px 1px 0 $main-border-color;
 	}
 	
 	&.dotted-top {
       border-top: dotted 2px $gray-light;
-      @include box-shadow( inset 0 1px 1px 0 rgba(255,255,255,.75) );
+      box-shadow: inset 0 1px 1px 0 rgba(255,255,255,.75);
   }
 	&.dotted-bottom {
       border-bottom: dotted 2px $gray-light;
-      @include box-shadow( 0 1px 1px 0 rgba(255,255,255,.75) );
+      box-shadow: 0 1px 1px 0 rgba(255,255,255,.75);
   }
 	&.dotted-top, &.dotted-bottom {
-		@include box-shadow( inset 0 1px 1px 0 rgba(255,255,255,.75), 0 1px 1px 0 rgba(255,255,255,.75) );
+		box-shadow: inset 0 1px 1px 0 rgba(255,255,255,.75), 0 1px 1px 0 rgba(255,255,255,.75);
 	}
 	
 	// 

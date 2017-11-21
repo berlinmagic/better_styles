@@ -38,7 +38,7 @@
 	}
   
   &.blank { background: transparent; }
-  &.shadow { @include box-shadow( 0 3px 3px 0 rgba(0, 0, 0, 0.20) ); }
+  &.shadow { box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.20); }
   
   &.center { text-align: center; }
   &.right { text-align: right; }

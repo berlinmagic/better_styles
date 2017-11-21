@@ -47,7 +47,7 @@ img.paperplane_pic {
 	line-height: 20px;
 	text-align: center;
 	vertical-align: top;
-	@include border-radius(3px);
+	border-radius: 3px;
 	.sample_icon, .sample_name {
 	    display: block; position: relative;
 	    margin: 0; padding: 0;
@@ -59,7 +59,7 @@ img.paperplane_pic {
 	    color: #444;
 		background: #fff;
 		border: solid 1px #ccc;
-		@include border-radius(3px);
+		border-radius:3px;
 	}
 	.sample_name { 
     font-weight: bold; height: 40px; vertical-align: middle; 
