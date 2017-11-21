@@ -78,7 +78,7 @@
   }
 	&.hard-bottom {
       border-bottom: solid 1px rgba(255,255,255,.75);
-      @include box-shadow( inset 0 -1px 1px 0 $main-border-color );
+      box-shadow: inset 0 -1px 1px 0 $main-border-color;
   }
 	&.hard-top.hard-bottom {
 		box-shadow: inset 0 1px 1px 0 rgba(255,255,255,.75), inset 0 -1px 1px 0 $main-border-color;

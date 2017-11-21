@@ -1,3 +1,3 @@
 module BetterStyles
-  VERSION = '0.0.0.334'
+  VERSION = '0.0.0.335'
 end
